@@ -1,0 +1,658 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    width: 100%;
+}
+.container{
+    background-color: rgb(36, 36, 36);
+    position: relative;
+    max-width: 2000px;
+    overflow: hidden;    
+    direction: rtl;
+    height: 320vh;
+    color: white;
+    margin: auto;
+}
+.container .home{
+    margin: auto;
+    color: white;
+    width: 90%;
+}
+.home .navBar{
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+}
+.home .navBar .companyName{
+    list-style-type: none;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 30px;
+}
+.home .navBar .companyName .redT{
+    color: red;
+}
+.home .navBar .companyName .blueC{
+    color: blue;
+}
+.home .navBar .navItem{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+}
+.home .navBar .navItem .toggler{
+    color: white;
+    margin: 15px;
+    padding: 5px;   
+    font-size: 30px;
+    display: none;
+}
+.home .navBar .navItem li{
+    cursor: pointer;
+    margin: 20px;
+    padding: 5px;
+}
+.home .navBar .navItem li a{
+    text-decoration: none;
+    color: white;
+
+}
+.home .navBar .navItem .getS{
+    border: 1px solid white;
+    padding: 10px 15px 5px;
+    border-radius: 5px;
+    margin: 15px;
+}
+.home .navBar .navItem li a:hover{
+    transition: all 0.5s;
+    color:red;
+}
+.home .navBar .navItem .getS:hover{
+    border: 1px solid white;
+    background-color: red;
+    transition: all 0.5s;
+    color: white;
+}
+.home .caption{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+.home .caption .captionDetail{
+    position: relative;
+    width: 45%;
+    margin: 80px;
+    top: 100px;
+}
+.home .caption .captionDetail h1{
+    font-size: 50px;  
+}
+.home .caption .captionDetail p{
+    font-size: 20px;
+}
+.home .caption .captionDetail button{
+    box-shadow: 0px 0px 15px rgb(20, 20, 249);
+    background-color: rgb(231, 40, 40);
+    border-radius: 5px;
+    margin-top: 35px;
+    font-size: 18px;
+    color: white;
+    height: 45px;
+    width: 85px;
+}
+.home .caption .captionDetail button:hover{
+    box-shadow: 0px 0px 15px rgb(231, 40, 40);
+    background-color:  rgb(20, 20, 249);
+    transition: all 0.5s;
+}
+.home .caption img{
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-name: moveImg;
+    animation-duration: 3s;
+    position: absolute;
+    height: 200px;
+    width: 550px;
+    margin: auto;
+    top: 250px;
+    left: 8%;
+}
+.services{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 185px;
+}
+.servicesData .services h1{
+    font-size: 25px;
+}
+.servicesData .services p{
+    margin: 10px 0px;   
+    font-size: 20px;
+}
+.servicesData .services .servicesType{
+    justify-content: center;   
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.servicesData .services .servicesType .Type{
+    background-color: rgb(84, 84, 84);
+    font-weight: bold;
+    padding: 30px;
+    width: 220px;
+    margin: 5px;
+}
+.servicesData .services .servicesType .Type:hover{
+    transition: all 0.75s;
+    cursor: pointer;
+    color:red;
+}
+.servicesData .services .servicesType .Type h1{
+   font-size: 18px;
+}
+.clients{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    top: 250px;
+}
+.clients div h1{
+    font-size: 25px;
+}
+.clients div p{
+    font-size: 16px;
+    padding: 20px;
+}
+.contactUS{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 300px;
+} 
+.contactUS .header{
+    margin-bottom: 35px;
+    text-align: center;
+    margin: 15px;
+}
+.contactUS .header h1{
+    font-size: 25px;
+}
+.contactUS .header p{
+    font-size: 16px;
+    padding: 20px;
+}
+.contactUS .Ways{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.contactUS .Ways .contact{
+    background-color: rgb(65, 65, 65);
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+    padding: 25px;
+    height: 600px;
+    width: 500px;
+    margin: 5px;
+}
+.contactUS .Ways .contact .map{
+    width: 100%;
+    height: 65%;
+}
+.contactUS .Ways .contact .location{
+    justify-content: space-between;
+    display: flex;
+    margin: 10px;
+}
+.contactUS .Ways .contact .location .Data h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.contactUS .Ways .contact .location .Data p{
+    font-size: 16px;
+}
+.contactUS .Ways .contact .location i{
+    background-color: rgb(36, 36, 36);
+    border-radius: 50%;
+    padding: 15px;
+    color: red;
+}
+.contactUS .Ways .contact .location i:hover{
+    color: rgb(36, 36, 36);
+    background-color: red;
+}
+.contactUS .Ways .contact .email{
+    justify-content: space-between;
+    display: flex;
+    margin: 10px;
+}
+.contactUS .Ways .contact .email .Data h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.contactUS .Ways .contact .email .Data p{
+    font-size: 16px;
+}
+.contactUS .Ways .contact .email i{
+    background-color: rgb(36, 36, 36);
+    border-radius: 50%;
+    padding: 15px;
+    color: red;
+}
+.contactUS .Ways .contact .email i:hover{
+    color: rgb(36, 36, 36);
+    background-color: red;
+}
+.contactUS .Ways .contact .phone{
+    justify-content: space-between;
+    display: flex;
+    margin: 10px;
+}
+.contactUS .Ways .contact .phone .Data h2{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.contactUS .Ways .contact .phone .Data p{
+    font-size: 16px;
+}
+.contactUS .Ways .contact .phone i{
+    background-color: rgb(36, 36, 36);
+    margin-bottom: 15px;
+    border-radius: 50%;
+    padding: 15px;
+    color: red;
+}
+.contactUS .Ways .contact .phone i:hover{
+    color: rgb(36, 36, 36);
+    background-color: red;
+}
+.contactUS .Ways .form{
+    background-color: rgb(65, 65, 65);
+    border-bottom: 5px solid red;
+    border-top: 5px solid red;
+    position: relative;
+    margin: 5px;
+    padding: 25px;
+    width: 500px;
+}
+.contactUS .Ways .form input,textarea{
+    background-color: rgb(36, 36, 36);
+    border-color: black;
+}
+.contactUS .Ways .form .userdata{
+    flex-wrap: wrap;
+    display: flex;
+}
+.contactUS .Ways .form .data label{
+    padding: 15px 5px 0px 0px;
+    position: absolute;
+}
+.contactUS .Ways .form .data input{
+    margin: 45px 5px 20px 0px;
+    padding: 3px;
+    width: 230px;
+}
+.contactUS .Ways .form .massage .subject label{
+    position: absolute;
+    padding-right: 5px;
+}
+.contactUS .Ways .form .massage .subject input{
+    margin: 30px 5px 20px 0px;
+    width: 475px;
+    padding: 3px;
+}
+.contactUS .Ways .form .massage .massageContant label{
+    padding: 0px 5px 25px 5px;
+    position: absolute;
+}
+.contactUS .Ways .form .massage .massageContant textarea{
+    min-height: 250px;
+    max-height: 250px; 
+    min-width: 480px;
+    max-width: 480px;
+    margin: 25px 5px;
+}   
+.contactUS .Ways .form button{
+    background-color: red;
+    border:5px solid red;
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    width: 120px;
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+.contactUS .Ways .form button:hover{
+    background-color: blue;
+    border:5px solid blue;
+    transition: all 0.5;
+    border-radius: 5px;
+}
+.footer{
+    background-color: rgb(65, 65, 65);
+    justify-content: space-between;
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    height: 200px;
+    bottom: 0px;
+    width: 90%;
+    left: 0;
+    right: 0;
+}
+.footer .footerContant div{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 40px;
+}
+.footer .footerContant h1{
+    font-size: 45px;    
+    padding: 25px;
+}
+.footer .footerContant hr{
+    margin: 25px;    
+}
+.footer .footerContant div a{
+    text-decoration: none;
+    color: red;
+}
+@keyframes moveImg{
+    50%{
+        top: 270px;
+    }
+    100%{
+        top: 250px;
+    }
+}
+
+@media(max-width : 1400px){
+.container{
+    height: 330vh;
+}
+}
+
+@media(max-width : 1200px){
+.container{
+    height: 475vh;
+}
+.home .caption .captionDetail{
+    position: relative;
+    text-align: justify;
+    width: 100%;
+    top: 60px;
+}
+.home .caption .captionDetail p{
+    font-size: 30px;
+}
+.home .caption .captionDetail h1{
+    font-size: 80px;  
+}
+.home .caption img{
+    animation-name: moveImg;
+    position: relative;
+    height: 200px;
+    width: 500px;
+    top: 100px;
+    left: 0%;
+    right: 0%;
+}
+@keyframes moveImg{
+    50%{
+        top: 80px;
+    }
+    100%{
+        top: 100px;
+    }
+}
+.services{
+    position: relative;
+    top: 100px;
+}
+.contactUS .Ways .contact{
+    padding: 25px;
+    height: 600px;
+    width: 600px;
+    margin: 5px;
+}
+.contactUS .Ways .contact .location .Data p{
+    font-size: 18px;
+}
+.contactUS .Ways .contact .email .Data p{
+    font-size: 18px;
+}
+.contactUS .Ways .contact .phone .Data p{
+    font-size: 18px;
+}
+.contactUS .Ways .form{
+    padding: 25px;
+    width: 600px;
+    height: 600px;
+}
+.contactUS .Ways .form .data input{
+    width: 280px;
+}
+.contactUS .Ways .form .massage .subject input{
+    width: 574px;
+}
+.contactUS .Ways .form .massage .massageContant textarea{
+    min-height: 250px;
+    max-height: 250px; 
+    min-width: 582px;
+    max-width: 480px;
+}
+}
+
+@media(max-width : 1000px){
+    .container{
+        height: 500vh;
+    }  
+    .home .navBar .navItem li{
+        display: none;
+    }
+    .home .navBar .navItem .toggler{
+        display: block;
+    }
+}
+
+@media(max-width : 800px){
+    .container{
+        height: 510vh;
+    } 
+    .home .navBar .navItem li{
+        display: none;
+    }
+    .home .navBar .navItem .toggler{
+        display: block;
+    }
+    .contactUS .Ways .contact{
+        padding: 25px;
+        height: 600px;
+        width: 525px;
+    }
+    .contactUS .Ways .contact .location .Data p{
+        font-size: 18px;
+    }
+    .contactUS .Ways .contact .email .Data p{
+        font-size: 18px;
+    }
+    .contactUS .Ways .contact .phone .Data p{
+        font-size: 18px;
+    }
+    .contactUS .Ways .form{
+        padding: 38px;
+        width: 500px;
+        height: 600px;
+    }
+    .contactUS .Ways .form .data input{
+        width: 485px;
+    }
+    .contactUS .Ways .form .massage .subject input{
+        width: 485px;
+    }
+    .contactUS .Ways .form .massage .massageContant textarea{
+        min-height: 250px;
+        max-height: 250px; 
+        min-width: 492px;
+        max-width: 492px;
+    } 
+    .footer .footerContant div{
+        justify-content: center;
+        margin: 30px;
+    }
+}
+
+@media(max-width : 700px){
+    .container{
+        height: 540vh;
+    }
+}
+
+@media(max-width : 660px){
+    .container{
+        height: 600vh;
+    }
+}
+
+@media(max-width : 600px){
+    .container{
+        height: 600vh;
+    }
+    .home .navBar .navItem li{
+        display: none;
+    }
+    .home .navBar .navItem .toggler{
+        display: block;
+    }
+    .home .caption .captionDetail h1{
+        font-size: 50px;  
+    }
+    .home .caption .captionDetail p{
+        font-size: 25px;
+    }
+    .home .caption img{
+        animation-name: moveImg;
+        position: relative;
+        height: 175px;
+        width: 450px;
+        top: 100px;
+        left: 0%;
+        right: 0%;
+    }
+    .contactUS .Ways .form{
+        padding: 38px;
+        width: 397px;
+        height: 600px;
+    }
+    .contactUS .Ways .form .data input{
+        width: 385px;
+    }
+    .contactUS .Ways .form .massage .subject input{
+        width: 385px;
+    }
+    .contactUS .Ways .form .massage .massageContant textarea{
+        min-height: 250px;
+        max-height: 250px; 
+        min-width: 392px;
+        max-width: 392px;
+    }
+}
+
+@media(max-width : 500px){
+    .container{
+        height: 750vh;
+    }
+    .home .caption img{
+        animation-name: moveImg;
+        position: relative;
+        height: 150px;
+        width: 280px;
+        top: 100px;
+        right: 0%;
+        left: 0%;
+    }
+    .home .caption .captionDetail h1{
+        font-size: 30px;  
+    }
+    .home .caption .captionDetail p{
+        font-size: 18px;
+    }
+    .home .caption .captionDetail button{
+        border-radius: 5px;
+        margin: 35px 0px 20px;
+        font-size: 18px;
+        height: 45px;
+        width: 85px;
+    }
+    .home .navBar .navItem li{
+        display: none;
+    }
+    .home .navBar .navItem .toggler{
+        display: block;
+    }
+    .contactUS .Ways .form{
+        padding: 38px;
+        width: 397px;
+        height: 600px;
+    }
+    .contactUS .Ways .form .data input{
+        width: 385px;
+    }
+    .contactUS .Ways .form .massage .subject input{
+        width: 385px;
+    }
+    .contactUS .Ways .form .massage .massageContant textarea{
+        min-height: 250px;
+        max-height: 250px; 
+        min-width: 392px;
+        max-width: 392px;
+    }
+}
+
+@media(max-width : 450px){
+    .container{
+        height: 490vh;
+    }
+}
+
+@media(max-width : 400px){
+    .container{
+        height: 520vh;
+    }
+    .contactUS .Ways .form{
+        padding: 38px;
+        width: 300px;
+        height: 600px;
+    }
+    .contactUS .Ways .form .data input{
+        width: 285px;
+    }
+    .contactUS .Ways .form .massage .subject input{
+        width: 285px;
+    }
+    .contactUS .Ways .form .massage .massageContant textarea{
+        min-height: 250px;
+        max-height: 250px; 
+        min-width: 290px;
+        max-width: 290px;
+    }
+}
